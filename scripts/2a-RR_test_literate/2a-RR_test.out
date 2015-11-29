@@ -1,0 +1,129 @@
+
+
+processing file: 2a-RR_test.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |...                                                              |   4%
+  ordinary text without R code
+
+  |                                                                         |.....                                                            |   8%
+label: unnamed-chunk-1
+  |                                                                         |........                                                         |  12%
+  ordinary text without R code
+
+  |                                                                         |...........                                                      |  17%
+label: unnamed-chunk-2
+  |                                                                         |..............                                                   |  21%
+  ordinary text without R code
+
+  |                                                                         |................                                                 |  25%
+label: unnamed-chunk-3
+  |                                                                         |...................                                              |  29%
+  ordinary text without R code
+
+  |                                                                         |......................                                           |  33%
+label: unnamed-chunk-4
+  |                                                                         |........................                                         |  38%
+  ordinary text without R code
+
+  |                                                                         |...........................                                      |  42%
+label: unnamed-chunk-5
+  |                                                                         |..............................                                   |  46%
+  ordinary text without R code
+
+  |                                                                         |................................                                 |  50%
+label: unnamed-chunk-6
+  |                                                                         |...................................                              |  54%
+  ordinary text without R code
+
+  |                                                                         |......................................                           |  58%
+label: unnamed-chunk-7
+  |                                                                         |.........................................                        |  62%
+  ordinary text without R code
+
+  |                                                                         |...........................................                      |  67%
+label: unnamed-chunk-8
+  |                                                                         |..............................................                   |  71%
+label: unnamed-chunk-9 (with options) 
+List of 1
+ $ results: chr "hide"
+
+  |                                                                         |.................................................                |  75%
+  ordinary text without R code
+
+  |                                                                         |...................................................              |  79%
+label: unnamed-chunk-10
+Read 10000 items
+Read 10000 items
+Read 10000 items
+  |                                                                         |......................................................           |  83%
+  ordinary text without R code
+
+  |                                                                         |.........................................................        |  88%
+label: unnamed-chunk-11
+  |                                                                         |............................................................     |  92%
+  ordinary text without R code
+
+  |                                                                         |..............................................................   |  96%
+label: unnamed-chunk-12
+  |                                                                         |.................................................................| 100%
+  ordinary text without R code
+
+
+output file: 2a-RR_test.md
+
+Job Id: 28414769.mgr-04.i
+    Job_Name = 2a-RR_test
+    Job_Owner = funkhou9@dev-intel10.i
+    resources_used.cput = 00:16:52
+    resources_used.energy_used = 0
+    resources_used.mem = 1269856kb
+    resources_used.vmem = 1716684kb
+    resources_used.walltime = 00:17:04
+    job_state = R
+    queue = main
+    server = mgr-04.i
+    Checkpoint = u
+    ctime = Sat Nov 28 18:05:48 2015
+    Error_Path = dev-intel10:/mnt/home/funkhou9/Project-LUAD/scripts/2a-RR_tes
+	t.out
+    exec_host = csp-012/4
+    Hold_Types = n
+    Join_Path = oe
+    Keep_Files = n
+    Mail_Points = abe
+    mtime = Sat Nov 28 18:07:06 2015
+    Output_Path = dev-intel10:/mnt/home/funkhou9/Project-LUAD/scripts/2a-RR_te
+	st.out
+    Priority = 0
+    qtime = Sat Nov 28 18:05:48 2015
+    Rerunable = False
+    Resource_List.mem = 8gb
+    Resource_List.nodect = 1
+    Resource_List.nodes = 1:ppn=1:intel14
+    Resource_List.walltime = 00:45:00
+    session_id = 69423
+    Variable_List = PBS_O_QUEUE=main,PBS_O_HOME=/mnt/home/funkhou9,
+	PBS_O_LOGNAME=funkhou9,
+	PBS_O_PATH=/opt/software/Clang/20140106--GCC-4.8.2/bin:/opt/software/
+	R/3.1.0--GCC-4.8.2/bin:/opt/software/boost/1.55.0--GCC-4.8.2--OpenMPI-
+	1.6.5/bin:/opt/software/OpenMPI/1.6.5--GCC-4.8.2/bin:/opt/software/GCC
+	/4.8.2/bin:/opt/software/powertools/bin:/opt/software/Stata/13.0:/opt/
+	software/MATLAB/R2014a/bin:/opt/software/Python/2.7.2--GCC-4.4.5/bin:/
+	opt/software/cmake/2.8.5--GCC-4.4.5/bin:/usr/lib64/qt-3.3/bin:/opt/sof
+	tware/lmod/bin:/opt/moab/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/s
+	bin:/usr/sbin:/sbin:/usr/local/hpcc/bin:/mnt/home/funkhou9/Productivit
+	y,PBS_O_MAIL=/var/spool/mail/funkhou9,PBS_O_SHELL=/bin/bash,
+	PBS_O_LANG=en_US.UTF-8,
+	PBS_O_WORKDIR=/mnt/home/funkhou9/Project-LUAD/scripts,
+	PBS_O_HOST=dev-intel10.i,PBS_O_SERVER=mgr-04
+    euser = funkhou9
+    egroup = gen
+    queue_type = E
+    etime = Sat Nov 28 18:05:48 2015
+    submit_args = base.sh
+    start_time = Sat Nov 28 18:07:06 2015
+    Walltime.Remaining = 1649
+    start_count = 1
+    fault_tolerant = False
+    job_radix = 0
+    submit_host = dev-intel10.i
+
