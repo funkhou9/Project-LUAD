@@ -1,107 +1,117 @@
 
 
 processing file: 2b-BL_test.Rmd
-  |                                                                         |                                                                 |   0%  |                                                                         |...                                                              |   4%
+  |                                                                         |                                                                 |   0%  |                                                                         |..                                                               |   4%
   ordinary text without R code
 
-  |                                                                         |.....                                                            |   8%
+  |                                                                         |.....                                                            |   7%
 label: unnamed-chunk-1
-  |                                                                         |........                                                         |  12%
+  |                                                                         |.......                                                          |  11%
   ordinary text without R code
 
-  |                                                                         |...........                                                      |  17%
+  |                                                                         |.........                                                        |  14%
 label: unnamed-chunk-2
+  |                                                                         |............                                                     |  18%
+  ordinary text without R code
+
   |                                                                         |..............                                                   |  21%
-  ordinary text without R code
-
-  |                                                                         |................                                                 |  25%
 label: unnamed-chunk-3
+  |                                                                         |................                                                 |  25%
+  ordinary text without R code
+
   |                                                                         |...................                                              |  29%
-  ordinary text without R code
-
-  |                                                                         |......................                                           |  33%
 label: unnamed-chunk-4
-  |                                                                         |........................                                         |  38%
+  |                                                                         |.....................                                            |  32%
   ordinary text without R code
 
-  |                                                                         |...........................                                      |  42%
+  |                                                                         |.......................                                          |  36%
 label: unnamed-chunk-5
+  |                                                                         |..........................                                       |  39%
+  ordinary text without R code
+
+  |                                                                         |............................                                     |  43%
+label: unnamed-chunk-6
   |                                                                         |..............................                                   |  46%
   ordinary text without R code
 
   |                                                                         |................................                                 |  50%
-label: unnamed-chunk-6
+label: unnamed-chunk-7
   |                                                                         |...................................                              |  54%
   ordinary text without R code
 
-  |                                                                         |......................................                           |  58%
-label: unnamed-chunk-7
-  |                                                                         |.........................................                        |  62%
-  ordinary text without R code
-
-  |                                                                         |...........................................                      |  67%
+  |                                                                         |.....................................                            |  57%
 label: unnamed-chunk-8
-  |                                                                         |..............................................                   |  71%
+  |                                                                         |.......................................                          |  61%
 label: unnamed-chunk-9 (with options) 
 List of 1
  $ results: chr "hide"
 
-  |                                                                         |.................................................                |  75%
+  |                                                                         |..........................................                       |  64%
   ordinary text without R code
 
-  |                                                                         |...................................................              |  79%
+  |                                                                         |............................................                     |  68%
 label: unnamed-chunk-10
 Read 10000 items
 Read 10000 items
 Read 10000 items
 Read 10000 items
-  |                                                                         |......................................................           |  83%
+  |                                                                         |..............................................                   |  71%
   ordinary text without R code
 
-  |                                                                         |.........................................................        |  88%
+  |                                                                         |.................................................                |  75%
 label: unnamed-chunk-11
-  |                                                                         |............................................................     |  92%
+  |                                                                         |...................................................              |  79%
   ordinary text without R code
 
-  |                                                                         |..............................................................   |  96%
+  |                                                                         |.....................................................            |  82%
 label: unnamed-chunk-12
+  |                                                                         |........................................................         |  86%
+  ordinary text without R code
+
+  |                                                                         |..........................................................       |  89%
+label: unnamed-chunk-13
+  |                                                                         |............................................................     |  93%
+  ordinary text without R code
+
+  |                                                                         |...............................................................  |  96%
+label: unnamed-chunk-14
   |                                                                         |.................................................................| 100%
   ordinary text without R code
 
 
 output file: 2b-BL_test.md
 
-Job Id: 28414768.mgr-04.i
+Job Id: 28418537.mgr-04.i
     Job_Name = 2b-BL_test
     Job_Owner = funkhou9@dev-intel10.i
-    resources_used.cput = 00:19:46
+    resources_used.cput = 00:19:58
     resources_used.energy_used = 0
-    resources_used.mem = 1360060kb
-    resources_used.vmem = 1806948kb
-    resources_used.walltime = 00:19:49
+    resources_used.mem = 1360748kb
+    resources_used.vmem = 1807864kb
+    resources_used.walltime = 00:20:03
     job_state = R
     queue = main
     server = mgr-04.i
     Checkpoint = u
-    ctime = Sat Nov 28 18:05:39 2015
+    ctime = Sat Nov 28 21:38:30 2015
     Error_Path = dev-intel10:/mnt/home/funkhou9/Project-LUAD/scripts/2b-BL_tes
 	t.out
-    exec_host = csn-034/1
+    exec_host = csp-013/13
     Hold_Types = n
     Join_Path = oe
     Keep_Files = n
     Mail_Points = abe
-    mtime = Sat Nov 28 18:05:59 2015
+    mtime = Sat Nov 28 21:39:21 2015
     Output_Path = dev-intel10:/mnt/home/funkhou9/Project-LUAD/scripts/2b-BL_te
 	st.out
     Priority = 0
-    qtime = Sat Nov 28 18:05:39 2015
+    qtime = Sat Nov 28 21:38:30 2015
     Rerunable = False
     Resource_List.mem = 8gb
     Resource_List.nodect = 1
     Resource_List.nodes = 1:ppn=1:intel14
-    Resource_List.walltime = 00:45:00
-    session_id = 93542
+    Resource_List.walltime = 00:30:00
+    session_id = 101426
     Variable_List = PBS_O_QUEUE=main,PBS_O_HOME=/mnt/home/funkhou9,
 	PBS_O_LOGNAME=funkhou9,
 	PBS_O_PATH=/opt/software/Clang/20140106--GCC-4.8.2/bin:/opt/software/
@@ -119,10 +129,10 @@ Job Id: 28414768.mgr-04.i
     euser = funkhou9
     egroup = gen
     queue_type = E
-    etime = Sat Nov 28 18:05:39 2015
+    etime = Sat Nov 28 21:38:30 2015
     submit_args = base.sh
-    start_time = Sat Nov 28 18:05:59 2015
-    Walltime.Remaining = 1464
+    start_time = Sat Nov 28 21:39:21 2015
+    Walltime.Remaining = 550
     start_count = 1
     fault_tolerant = False
     job_radix = 0

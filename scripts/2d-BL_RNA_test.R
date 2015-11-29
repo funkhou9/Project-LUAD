@@ -60,15 +60,23 @@ thresholds <- scan("../data/processed/for_analysis/posterior/cnv/BL-thresholds.d
 
 plot(lambda)
 
-#' Check prediction accuracy and determine optimal classification threshold.
+#' ### Check prediction accuracy
+roc <- roc(mrna[, 1][mask], fm$yHat[mask])
+
+#' Determine optimal threshold for classification.
+thresh <- which(roc$sensitivities == max(roc$sensitivities) & roc$specificities == max(roc$specificities))
+
+#' Visualze prections with one classification threshold.
 plot(fm$yHat[mask],
 	 mrna[, 1][mask],
 	 xlab = "Preditions",
-	 ylab = "Tumor status")
+	 ylab = "Tumor status",
+	 col = c("red", "blue")[(mrna[, 1][mask] == 1) + 1])
+abline(v = roc$thresholds[thresh][1])
 
-#' Check ROC curve
+#' Plot ROC curve using optimal thresholds(s).
 roc <- roc(mrna[, 1][mask], fm$yHat[mask])
-plot(roc, col = "green")
+plot(roc, col = "blue")
 
 save.image(file = "../2c-RR_RNA_test.RData")
 

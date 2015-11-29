@@ -51,7 +51,7 @@ fm <- BGLR(y = Y,
 	   	   nIter = 20000,
 	   	   burnIn = 2000,
 	   	   thin = 2,
-	   	   saveAt = "../data/processed/for_analysis/posterior/mrna/BL-")
+	   	   saveAt = "../data/processed/for_analysis/posterior/cnv/BL-")
 
 #' Inspect trace plots.
 lambda <- scan("../data/processed/for_analysis/posterior/cnv/BL-ETA_cnv_lambda.dat")
@@ -62,19 +62,23 @@ thresholds <- scan("../data/processed/for_analysis/posterior/cnv/BL-thresholds.d
 plot(lambda)
 plot(thresholds)
 
-#' Check prediction accuracy and determine optimal classification threshold.
+#' ### Check prediction accuracy
+roc <- roc(cnv[, 1][mask], fm$yHat[mask])
+
+#' Determine optimal threshold for classification.
+thresh <- which(roc$sensitivities == max(roc$sensitivities) & roc$specificities == max(roc$specificities))
+
+#' Visualze prections with one classification threshold.
 plot(fm$yHat[mask],
 	 cnv[, 1][mask],
-	 col = c("red", "blue")[(fm$yHat[mask] > 0.5) + 1],
 	 xlab = "Preditions",
-	 ylab = "Tumor status")
-abline(v = 0.5,
-	   col = "darkgreen")
+	 ylab = "Tumor status",
+	 col = c("red", "blue")[(cnv[, 1][mask] == 1) + 1])
+abline(v = roc$thresholds[thresh][1])
 
-#' With an threshold 0.5, a perfect classifier is established - with a 100% TP (ture positive) rate and
-#'	100% TN (true negative) rate.
+#' Plot ROC curve using optimal thresholds(s).
 roc <- roc(cnv[, 1][mask], fm$yHat[mask])
-plot(roc, col = "green")
+plot(roc, col = "blue")
 
 
 save.image(file = "../2b-BL_test.RData")

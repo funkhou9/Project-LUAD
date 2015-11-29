@@ -51,7 +51,7 @@ fm <- BGLR(y = Y,
 	   	   nIter = 20000,
 	   	   burnIn = 2000,
 	   	   thin = 2,
-	   	   saveAt = "../data/processed/for_analysis/posterior/mrna/RR-")
+	   	   saveAt = "../data/processed/for_analysis/posterior/cnv/RR-")
 
 #' Inspect trace plots.
 cnv_varB <- scan("../data/processed/for_analysis/posterior/cnv/RR-ETA_cnv_varB.dat")
@@ -60,14 +60,22 @@ mu <- scan("../data/processed/for_analysis/posterior/cnv/RR-mu.dat")
 
 plot(cnv_varB)
 
-#' Check prediction accuracy and determine optimal classification threshold.
+#' ### Check prediction accuracy
+roc <- roc(cnv[, 1][mask], fm$yHat[mask])
+
+#' Determine optimal threshold for classification.
+thresh <- which(roc$sensitivities == max(roc$sensitivities) & roc$specificities == max(roc$specificities))
+
+#' Visualze prections with one classification threshold.
 plot(fm$yHat[mask],
 	 cnv[, 1][mask],
 	 xlab = "Preditions",
-	 ylab = "Tumor status")
+	 ylab = "Tumor status",
+	 col = c("red", "blue")[(cnv[, 1][mask] == 1) + 1])
+abline(v = roc$thresholds[thresh][1])
 
-#' Check ROC curve
+#' Plot ROC curve using optimal thresholds(s).
 roc <- roc(cnv[, 1][mask], fm$yHat[mask])
-plot(roc, col = "green")
+plot(roc, col = "blue")
 
 save.image(file = "../2a-RR_test.RData")

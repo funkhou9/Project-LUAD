@@ -115,35 +115,51 @@ plot(mrna_varB)
 
 ![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10-1.png) 
 
-Check prediction accuracy and determine optimal classification threshold.
+### Check prediction accuracy
+
+
+```r
+roc <- roc(mrna[, 1][mask], fm$yHat[mask])
+```
+
+Determine optimal threshold for classification.
+
+
+```r
+thresh <- which(roc$sensitivities == max(roc$sensitivities) & roc$specificities == max(roc$specificities))
+```
+
+Visualze prections with one classification threshold.
 
 
 ```r
 plot(fm$yHat[mask],
 	 mrna[, 1][mask],
 	 xlab = "Preditions",
-	 ylab = "Tumor status")
+	 ylab = "Tumor status",
+	 col = c("red", "blue")[(mrna[, 1][mask] == 1) + 1])
+abline(v = roc$thresholds[thresh][1])
 ```
 
-![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11-1.png) 
+![plot of chunk unnamed-chunk-13](figure/unnamed-chunk-13-1.png) 
 
-Check ROC curve
+Plot ROC curve using optimal thresholds(s).
 
 
 ```r
 roc <- roc(mrna[, 1][mask], fm$yHat[mask])
-plot(roc, col = "green")
+plot(roc, col = "blue")
 ```
 
-![plot of chunk unnamed-chunk-12](figure/unnamed-chunk-12-1.png) 
+![plot of chunk unnamed-chunk-14](figure/unnamed-chunk-14-1.png) 
 
 ```
 ## 
 ## Call:
 ## roc.default(response = mrna[, 1][mask], predictor = fm$yHat[mask])
 ## 
-## Data: fm$yHat[mask] in 89 controls (mrna[, 1][mask] 0) < 11 cases (mrna[, 1][mask] 1).
-## Area under the curve: 1
+## Data: fm$yHat[mask] in 92 controls (mrna[, 1][mask] 0) < 8 cases (mrna[, 1][mask] 1).
+## Area under the curve: 0.9973
 ```
 
 ```r
