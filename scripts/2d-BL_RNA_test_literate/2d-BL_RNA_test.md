@@ -1,7 +1,7 @@
 # 2c-RR_RNA_test.R
 
-- Scott Funkhouser and Ting Shen -
-- STT855 LUAD Final Project -
+- Scott Funkhouser and Ting Shen
+- STT855 LUAD Final Project
 
 ## Objective
 1. We want to test whether using the RNA seq data with a ridge regression estimator

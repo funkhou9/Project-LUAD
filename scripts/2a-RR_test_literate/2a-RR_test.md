@@ -1,7 +1,7 @@
 # 2a-RR_test,R
 
-- Scott Funkhouser and Ting Shen -
-- STT855 LUAD Final Project -
+- Scott Funkhouser and Ting Shen
+- STT855 LUAD Final Project
 
 ## Objective
 1. Now that we have downloaded cnv and normalized rna-seq data,
